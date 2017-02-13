@@ -12,6 +12,7 @@ class TestViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addSlideMenuButton()
         addBottomMenuButton()
     }

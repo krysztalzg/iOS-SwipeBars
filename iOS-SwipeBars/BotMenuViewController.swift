@@ -23,6 +23,8 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
     var delegate: SlideMenuDelegate?
     var swipeBtn: UIButton!
     
+    //MARK: View controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,8 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
         updateArrayMenuOptions()
     }
     
+    //MARK: Tableview
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -63,6 +67,7 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    //MARK: Bottom menu
     
     func updateArrayMenuOptions(){
         arrayMenuOptions = ["Option1", "Option2"]
@@ -72,18 +77,22 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func swipeDown( recognizer: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
-            self.view.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width,height: self.tblMenuOptions.bounds.size.height)
+            self.view.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height,
+                                     width: UIScreen.main.bounds.size.width, height: self.tblMenuOptions.bounds.size.height)
+            
             self.swipeBtn.setTitle("/\\", for: .normal)
-            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - self.swipeBtn.bounds.size.height, width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height)
+            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - self.swipeBtn.bounds.size.height,
+                                         width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height)
 
             self.view.layoutIfNeeded()
-            self.view.backgroundColor = UIColor.clear
         }, completion: { (finished) -> Void in
             self.view.removeFromSuperview()
             self.removeFromParentViewController()
         })
     }
     
+    
+    //MARK: View persistency test
     func persistTest() {
         while true {
             count += 1

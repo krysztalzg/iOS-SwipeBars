@@ -28,25 +28,19 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
-        if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
-            print("Same VC")
-        } else {
+        if topViewController.restorationIdentifier! != destViewController.restorationIdentifier!{
             self.navigationController!.pushViewController(destViewController, animated: true)
         }
     }
     
     func slideMenuItemSelectedAtIndex(_ index: Int) {
-        let topViewController : UIViewController = self.navigationController!.topViewController!
-        print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
             self.openViewControllerBasedOnIdentifier("MainView")
-            break
         case 1:
             self.openViewControllerBasedOnIdentifier("TestView")
-            break
         default:
-            print("default\n", terminator: "")
+            break
         }
     }
     
@@ -62,8 +56,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         menuVC.view.frame=CGRect(x: 0 , y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: menuVC.tblMenuOptions.bounds.size.height);
         
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
-            menuVC.view.frame=CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height, width: UIScreen.main.bounds.size.width, height: menuVC.tblMenuOptions.bounds.size.height);
-            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height - self.swipeBtn.bounds.size.height, width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height);
+            menuVC.view.frame=CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height,
+                                     width: UIScreen.main.bounds.size.width, height: menuVC.tblMenuOptions.bounds.size.height);
+            
+            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height - self.swipeBtn.bounds.size.height,
+                                         width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height);
             self.swipeBtn.setTitle("\\/", for: .normal)
         }, completion:nil)
     }
@@ -86,6 +83,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(BaseViewController.swipeUp(recognize:)))
         recognizer.direction = .up
         swipeBtn.addGestureRecognizer(recognizer)
+        
         self.view.addSubview(swipeBtn)
     }
     
@@ -114,7 +112,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     func onSlideMenuButtonPressed(_ sender : UIButton){
         if (sender.tag == 10)
         {
-            // To Hide Menu If it already there
             self.slideMenuItemSelectedAtIndex(-1);
             
             sender.tag = 0;

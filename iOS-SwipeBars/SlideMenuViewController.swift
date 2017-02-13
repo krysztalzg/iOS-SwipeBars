@@ -21,21 +21,23 @@ class SlideMenuViewController: UIViewController, UITableViewDataSource, UITableV
     var btnMenu : UIButton!
     var delegate: SlideMenuDelegate?
     
+    
+    //MARK: View controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateArrayMenuOptions()
     }
+    
+    //MARK: Tableview
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -70,6 +72,7 @@ class SlideMenuViewController: UIViewController, UITableViewDataSource, UITableV
     
 
     // MARK: - Slide menu
+    
     func updateArrayMenuOptions(){
         arrayMenuOptions.append(["title":"Home", "icon":"HomeIcon"])
         arrayMenuOptions.append(["title":"Play", "icon":"PlayIcon"])

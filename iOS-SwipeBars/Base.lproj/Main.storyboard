@@ -33,7 +33,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="W5L-u3-z6K"/>
                     <connections>
-                        <outlet property="txt" destination="Y3i-C5-ZYH" id="BUr-qM-JnY"/>
                         <segue destination="GIS-YQ-TgA" kind="show" id="Brn-yq-Akf"/>
                     </connections>
                 </viewController>
