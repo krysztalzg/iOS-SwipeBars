@@ -10,9 +10,11 @@ import UIKit
 
 class MainViewController: BaseViewController {
 
+    @IBOutlet weak var txt: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        addBottomMenuButton()
     }
 
     override func didReceiveMemoryWarning() {

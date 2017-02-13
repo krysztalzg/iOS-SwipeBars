@@ -46,7 +46,7 @@ class SlideMenuViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "SlideCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SlideCell")!
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.layoutMargins = UIEdgeInsets.zero

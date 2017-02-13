@@ -9,16 +9,17 @@
 import UIKit
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
-
+    public let swipeBtn = UIButton()
+    static var _view : UIView!
+    var swiped = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        BaseViewController._view = self.view
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -39,29 +40,53 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
-            print("Home\n", terminator: "")
-            
             self.openViewControllerBasedOnIdentifier("MainView")
-            
             break
         case 1:
-            print("Play\n", terminator: "")
-            
             self.openViewControllerBasedOnIdentifier("TestView")
-            
             break
         default:
             print("default\n", terminator: "")
         }
     }
     
-    func addSlideMenuButton(){
+    func swipeUp(recognize: UISwipeGestureRecognizer) {
+        let menuVC = AppDelegate.viewHook
+        menuVC.delegate = self
+        menuVC.removeFromParentViewController()
+        
+        self.view.addSubview(menuVC.view)
+        self.addChildViewController(menuVC)
+        menuVC.view.layoutIfNeeded()
+        
+        menuVC.view.frame=CGRect(x: 0 , y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: menuVC.tblMenuOptions.bounds.size.height);
+        
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+            menuVC.view.frame=CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height, width: UIScreen.main.bounds.size.width, height: menuVC.tblMenuOptions.bounds.size.height);
+            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - menuVC.tblMenuOptions.bounds.size.height - self.swipeBtn.bounds.size.height, width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height);
+            self.swipeBtn.setTitle("\\/", for: .normal)
+        }, completion:nil)
+    }
+    
+    func addSlideMenuButton() {
         let btnShowMenu = UIButton(type: UIButtonType.system)
         btnShowMenu.setImage(self.defaultMenuImage(), for: UIControlState())
         btnShowMenu.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btnShowMenu.addTarget(self, action: #selector(BaseViewController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
+    }
+    
+    func addBottomMenuButton() {
+        swipeBtn.backgroundColor = UIColor.lightGray
+        swipeBtn.setTitle("/\\", for: .normal)
+        swipeBtn.tag = 100
+        swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 50, width: UIScreen.main.bounds.size.width, height: 50)
+        
+        let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(BaseViewController.swipeUp(recognize:)))
+        recognizer.direction = .up
+        swipeBtn.addGestureRecognizer(recognizer)
+        self.view.addSubview(swipeBtn)
     }
     
     func defaultMenuImage() -> UIImage {
