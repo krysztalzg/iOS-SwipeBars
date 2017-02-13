@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE04E9A41E51ACB300AE20C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9A31E51ACB300AE20C9 /* AppDelegate.swift */; };
+		AE04E9A91E51ACB300AE20C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE04E9A71E51ACB300AE20C9 /* Main.storyboard */; };
+		AE04E9AB1E51ACB300AE20C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE04E9AA1E51ACB300AE20C9 /* Assets.xcassets */; };
+		AE04E9AE1E51ACB300AE20C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE04E9AC1E51ACB300AE20C9 /* LaunchScreen.storyboard */; };
+		AE04E9B61E51ADE700AE20C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9B51E51ADE600AE20C9 /* MainViewController.swift */; };
+		AE04E9B81E51ADEE00AE20C9 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9B71E51ADEE00AE20C9 /* SlideMenuViewController.swift */; };
+		AE04E9BB1E51AFC000AE20C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9BA1E51AFC000AE20C9 /* BaseViewController.swift */; };
+		AE04E9BD1E51B11E00AE20C9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE04E9A01E51ACB300AE20C9 /* iOS-SwipeBars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SwipeBars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE04E9A31E51ACB300AE20C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE04E9A81E51ACB300AE20C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE04E9AA1E51ACB300AE20C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE04E9AD1E51ACB300AE20C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE04E9AF1E51ACB300AE20C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE04E9B51E51ADE600AE20C9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE04E9B71E51ADEE00AE20C9 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
+		AE04E9BA1E51AFC000AE20C9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE04E99D1E51ACB300AE20C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE04E9971E51ACB300AE20C9 = {
+			isa = PBXGroup;
+			children = (
+				AE04E9A21E51ACB300AE20C9 /* iOS-SwipeBars */,
+				AE04E9A11E51ACB300AE20C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE04E9A11E51ACB300AE20C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE04E9A01E51ACB300AE20C9 /* iOS-SwipeBars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE04E9A21E51ACB300AE20C9 /* iOS-SwipeBars */ = {
+			isa = PBXGroup;
+			children = (
+				AE04E9A31E51ACB300AE20C9 /* AppDelegate.swift */,
+				AE04E9A71E51ACB300AE20C9 /* Main.storyboard */,
+				AE04E9B91E51ADF100AE20C9 /* Controllers */,
+				AE04E9AA1E51ACB300AE20C9 /* Assets.xcassets */,
+				AE04E9AC1E51ACB300AE20C9 /* LaunchScreen.storyboard */,
+				AE04E9AF1E51ACB300AE20C9 /* Info.plist */,
+			);
+			path = "iOS-SwipeBars";
+			sourceTree = "<group>";
+		};
+		AE04E9B91E51ADF100AE20C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE04E9BA1E51AFC000AE20C9 /* BaseViewController.swift */,
+				AE04E9B71E51ADEE00AE20C9 /* SlideMenuViewController.swift */,
+				AE04E9B51E51ADE600AE20C9 /* MainViewController.swift */,
+				AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE04E99F1E51ACB300AE20C9 /* iOS-SwipeBars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE04E9B21E51ACB300AE20C9 /* Build configuration list for PBXNativeTarget "iOS-SwipeBars" */;
+			buildPhases = (
+				AE04E99C1E51ACB300AE20C9 /* Sources */,
+				AE04E99D1E51ACB300AE20C9 /* Frameworks */,
+				AE04E99E1E51ACB300AE20C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-SwipeBars";
+			productName = "iOS-SwipeBars";
+			productReference = AE04E9A01E51ACB300AE20C9 /* iOS-SwipeBars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE04E9981E51ACB300AE20C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kamil Szczepański";
+				TargetAttributes = {
+					AE04E99F1E51ACB300AE20C9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 44ER2W5G5G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AE04E99B1E51ACB300AE20C9 /* Build configuration list for PBXProject "iOS-SwipeBars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE04E9971E51ACB300AE20C9;
+			productRefGroup = AE04E9A11E51ACB300AE20C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE04E99F1E51ACB300AE20C9 /* iOS-SwipeBars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE04E99E1E51ACB300AE20C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE04E9AE1E51ACB300AE20C9 /* LaunchScreen.storyboard in Resources */,
+				AE04E9AB1E51ACB300AE20C9 /* Assets.xcassets in Resources */,
+				AE04E9A91E51ACB300AE20C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE04E99C1E51ACB300AE20C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE04E9BD1E51B11E00AE20C9 /* TestViewController.swift in Sources */,
+				AE04E9A41E51ACB300AE20C9 /* AppDelegate.swift in Sources */,
+				AE04E9BB1E51AFC000AE20C9 /* BaseViewController.swift in Sources */,
+				AE04E9B81E51ADEE00AE20C9 /* SlideMenuViewController.swift in Sources */,
+				AE04E9B61E51ADE700AE20C9 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE04E9A71E51ACB300AE20C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE04E9A81E51ACB300AE20C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE04E9AC1E51ACB300AE20C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE04E9AD1E51ACB300AE20C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE04E9B01E51ACB300AE20C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE04E9B11E51ACB300AE20C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE04E9B31E51ACB300AE20C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44ER2W5G5G;
+				INFOPLIST_FILE = "iOS-SwipeBars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newaxis.iOS-SwipeBars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AE04E9B41E51ACB300AE20C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44ER2W5G5G;
+				INFOPLIST_FILE = "iOS-SwipeBars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newaxis.iOS-SwipeBars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE04E99B1E51ACB300AE20C9 /* Build configuration list for PBXProject "iOS-SwipeBars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE04E9B01E51ACB300AE20C9 /* Debug */,
+				AE04E9B11E51ACB300AE20C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE04E9B21E51ACB300AE20C9 /* Build configuration list for PBXNativeTarget "iOS-SwipeBars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE04E9B31E51ACB300AE20C9 /* Debug */,
+				AE04E9B41E51ACB300AE20C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE04E9981E51ACB300AE20C9 /* Project object */;
+}

@@ -1,0 +1,22 @@
+//
+//  MainViewController.swift
+//  iOS-SwipeBars
+//
+//  Created by Kamil Szczepański on 13/02/2017.
+//  Copyright © 2017 Kamil Szczepański. All rights reserved.
+//
+
+import UIKit
+
+class MainViewController: BaseViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSlideMenuButton()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+}
