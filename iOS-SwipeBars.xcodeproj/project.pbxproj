@@ -16,6 +16,7 @@
 		AE04E9BB1E51AFC000AE20C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9BA1E51AFC000AE20C9 /* BaseViewController.swift */; };
 		AE04E9BD1E51B11E00AE20C9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */; };
 		AE04E9BF1E51C45800AE20C9 /* BotMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04E9BE1E51C45800AE20C9 /* BotMenuViewController.swift */; };
+		AE6AE05F1E5D99B600979DC1 /* SwipeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AE05E1E5D99B600979DC1 /* SwipeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AE04E9BA1E51AFC000AE20C9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AE04E9BE1E51C45800AE20C9 /* BotMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotMenuViewController.swift; sourceTree = "<group>"; };
+		AE6AE05E1E5D99B600979DC1 /* SwipeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				AE04E9BE1E51C45800AE20C9 /* BotMenuViewController.swift */,
 				AE04E9B51E51ADE600AE20C9 /* MainViewController.swift */,
 				AE04E9BC1E51B11E00AE20C9 /* TestViewController.swift */,
+				AE6AE05E1E5D99B600979DC1 /* SwipeButton.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				AE04E9BD1E51B11E00AE20C9 /* TestViewController.swift in Sources */,
 				AE04E9BF1E51C45800AE20C9 /* BotMenuViewController.swift in Sources */,
+				AE6AE05F1E5D99B600979DC1 /* SwipeButton.swift in Sources */,
 				AE04E9A41E51ACB300AE20C9 /* AppDelegate.swift in Sources */,
 				AE04E9BB1E51AFC000AE20C9 /* BaseViewController.swift in Sources */,
 				AE04E9B81E51ADEE00AE20C9 /* SlideMenuViewController.swift in Sources */,
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44ER2W5G5G;
 				INFOPLIST_FILE = "iOS-SwipeBars/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newaxis.iOS-SwipeBars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44ER2W5G5G;
 				INFOPLIST_FILE = "iOS-SwipeBars/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newaxis.iOS-SwipeBars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,6 +332,7 @@
 				AE04E9B41E51ACB300AE20C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

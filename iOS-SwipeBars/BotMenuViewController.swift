@@ -21,7 +21,7 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
     var arrayMenuOptions = [String]()
     var btnMenu : UIButton!
     var delegate: SlideMenuDelegate?
-    var swipeBtn: UIButton!
+    var swipeBtn: SwipeButton!
     
     //MARK: View controller
     
@@ -40,10 +40,9 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        swipeBtn = BaseViewController._view.viewWithTag(100) as! UIButton
-        let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(BotMenuViewController.swipeDown(recognizer:)))
-        recognizer.direction = .down
-        swipeBtn.addGestureRecognizer(recognizer)
+        swipeBtn = BaseViewController._view.viewWithTag(100) as! SwipeButton
+        swipeBtn.bottomVC = self
+        swipeBtn.swipeDownPrep()
         
         updateArrayMenuOptions()
     }
@@ -71,24 +70,7 @@ class BotMenuViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func updateArrayMenuOptions(){
         arrayMenuOptions = ["Option1", "Option2"]
-        
         tblMenuOptions.reloadData()
-    }
-    
-    func swipeDown( recognizer: UISwipeGestureRecognizer) {
-        UIView.animate(withDuration: 0.3, animations: { () -> Void in
-            self.view.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height,
-                                     width: UIScreen.main.bounds.size.width, height: self.tblMenuOptions.bounds.size.height)
-            
-            self.swipeBtn.setTitle("/\\", for: .normal)
-            self.swipeBtn.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - self.swipeBtn.bounds.size.height,
-                                         width: UIScreen.main.bounds.size.width, height: self.swipeBtn.bounds.size.height)
-
-            self.view.layoutIfNeeded()
-        }, completion: { (finished) -> Void in
-            self.view.removeFromSuperview()
-            self.removeFromParentViewController()
-        })
     }
     
     
